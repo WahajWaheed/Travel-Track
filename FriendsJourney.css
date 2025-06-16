@@ -1,0 +1,248 @@
+/* Global styles */
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #007F5F, #2B2D42); /* green to dark blue */
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Page container */
+.journey-container {
+ 
+  min-height: 100vh;
+  padding: 40px 20px;
+  background-image: 
+    linear-gradient(to bottom, #007F5F, #2B2D42),
+    url('https://unsplash.com/illustrations/a-blue-and-white-background-with-wavy-lines-ILxTh9bwpOc');
+ /* actual image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* Title */
+.journey-container h2 {
+  margin-top: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+
+  
+}
+/* Travel list container */
+.travel-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Travel card */
+.travel-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.travel-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.travel-item strong {
+  color: #36d81d; /* Gold accent */
+}
+
+/* Error message */
+.error {
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-top: 10px;
+}
+/* Add this to FriendsJourney.css */
+.back-button {
+  background-color: #ffffff;
+  color: #2B2D42;
+  border: none;
+  padding: 8px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #e6e6e6;
+}
+
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: rgb(217, 226, 219);
+}
+
+
+
+.search-button {
+  padding: 10px 20px;
+  background: #1abc9c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-button:hover {
+  background: #16a085;
+}
+
+.like-button {
+  padding: 8px 16px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.like-button:hover {
+  background: #c0392b;
+}
+
+.like-button:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+.comment-section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.comment {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.add-comment {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.add-comment input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.add-comment button {
+  padding: 10px 15px;
+  background: #04d88b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.add-comment button:hover {
+  background: #2980b9;
+}
+/* Image styling */
+.travel-item img {
+  max-width: 100%;
+  height: 300px; /* Fixed height for consistency */
+  width: auto; /* Maintain aspect ratio */
+  border-radius: 12px;
+  margin: 15px 0;
+  object-fit: cover; /* Ensure images cover the space without distortion */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(0, 0, 0, 0.2); /* Fallback background for broken images */
+}
+
+.travel-item img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Image grid for multiple images */
+.travel-item .image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* Single image centering */
+.travel-item .single-image {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Fallback image styling */
+.travel-item img[src="/alt.jpg"] {
+  height: 200px;
+  object-fit: contain;
+  padding: 20px;
+  opacity: 0.8;
+}
+
+/* Image caption styling */
+.image-caption {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 8px;
+  text-align: center;
+}
